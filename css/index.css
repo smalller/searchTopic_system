@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* 头部 */
+header {
+    width: 100%;
+    min-width: 1226px;
+    height: 85px;
+}
+header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+header .head {
+    width: 1226px;
+    height: 85px;
+    margin: 0 auto;
+}
+header .head .logo {
+    width: 85px;
+    height: 85px;
+    background: url(../img/logo.jpg) no-repeat ;
+    background-size: 100%;
+    float: left;
+}
+header .head span {
+    line-height: 85px;
+    font-size: 36px;
+    font-weight: bold;
+    color:#404040;
+}
+
+
+/* 主体部分 */
+.main-container {
+    width: 100%;
+    min-width: 1226px;
+    height: 600px;
+    background: url(../img/main_bg.png) no-repeat 50% 50%;
+    margin: 0 auto;
+}
+.main-container .main {
+    width: 1226px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+/* 登录表单 */
+.main .loginForm {
+    height: 330px;
+    width: 360px;
+    float: right;
+    margin: 100px 60px;
+    background: #fff;
+}
+
+/* 表单上部分 */
+.loginForm .form-top {
+    height: 60px;
+    width: 360px; 
+    border-bottom: 2px solid #ff8300;
+}
+.loginForm .form-top .login {
+    float: left;
+    display: block;
+    height: 63px;
+    width: 180px;
+    font-size: 20px;
+    color: #999;
+    text-align: center;
+    line-height: 60px;
+    box-sizing: border-box;
+}
+
+/* 表单中间 */
+.loginForm .input-text {
+    height: 130px;
+    width: 360px;
+    border: 0;
+}
+.input-text input {
+    display: block;
+    height: 40px;
+    width: 300px;
+    border: 1px solid #e6e6e6;
+    outline: none;
+    font-size: 14px;
+    color: #999;
+    margin: 0 auto;   
+    padding-left: 15px;
+}
+.input-text #username {
+    margin: 30px auto 20px;
+}
+
+/* 找回密码 */
+.loginForm .register  a {
+    color: #999;
+    float: right;
+    margin: -10px 30px 10px 0;
+}
+.loginForm .register  a:hover {
+    color: #ff8300;
+}
+.loginForm .register span {
+    display: block;
+    float: left;
+    height: 25px;
+    width: 230px;
+    margin: -10px 0 10px 30px;
+    color: red;
+}
+
+/* 登录按钮 */
+.loginForm button {
+    height: 50px;
+    width: 300px;
+    background:#ff8300;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+/* 底部 */
+footer {
+    display: inline-block;
+    height: 30px;
+    width: 100%;
+    min-width: 1226px;
+    text-align: center;
+    margin-top: 10px;
+}

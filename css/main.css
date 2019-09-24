@@ -1,0 +1,178 @@
+/* 中间区域 */
+.main {
+    position: relative;
+}
+
+/* 查看题目按钮 */
+.main .alert span {
+    display: block;
+    cursor: pointer;
+    float: right;
+    font-size: 18px;
+    color: #2e2e2e;
+    font-weight: normal;
+    text-align: center;
+    margin: 30px 50px 0 0;
+}
+.main .alert span:hover {
+    color: #ff8300;
+    transition: 0.2s all;
+}
+
+/* 弹窗 */
+.main .alert-box {
+    display: none; 
+    width: 600px;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    background: #fff;
+    z-index: 3;
+    overflow: auto; 
+    padding: 40px 10px 40px 40px;
+}
+
+/* 弹窗里的小叉叉按钮 */
+.main .alert-box span {
+    display: block;
+    float: right;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin: 5px 10px 0 0;
+    font-size: 40px;
+    color: #999;
+}
+.main .alert-box span:hover {
+    color: #ff8300;
+}
+
+/* 弹窗内的表格内容 */
+table {
+    border: 2px solid #999;
+    margin: 0 auto; 
+}
+table td {
+    width: 500px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #999;
+}
+
+
+/* 抽中题目弹窗 */
+.main #alert-topic {
+    display: none;
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    background: #fff;
+    z-index: 3;
+    overflow: auto; 
+}
+/* 弹窗里的小叉叉按钮 */
+.main #alert-topic span {
+    display: block;
+    float: right;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin: 10px 10px 0 0;
+    font-size: 40px;
+    color: #999;
+}
+.main #alert-topic span:hover {
+    color: #ff8300;
+}
+
+
+/* 弹窗后的黑色板块 */
+.black-overlay {
+    display: none; 
+    position: absolute; 
+    top: 0; 
+    left: 0;  
+    width: 100%;
+    height: 1600px;  
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 2; 
+    opacity: .6; 
+}
+
+/* 表单盒子 */
+.main-form {
+    width: 600px;
+    height: 800px;
+    margin: 0 auto;
+}
+/* 表单 */
+form {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.main-form h3 {
+    text-align: center;
+    color: #2e2e2e;
+    font-size: 30px;
+    font-weight: normal;
+}
+form input {
+    display: block;
+    height: 40px;
+    width: 380px;
+    border: 0;
+    border: 1px solid #e6e6e6;
+    outline: none;
+    font-size: 14px;
+    margin: 20px auto;   
+    padding-left: 15px;
+}
+
+form span {
+    display: block;
+    height: 25px;
+    width: 380px;
+    margin: 20px auto;
+    color: red;
+}
+
+/* 确认信息按钮 */
+.main-form button {
+    height: 50px;
+    width: 180px;
+    background:#ff8300;
+    float: left;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    cursor: pointer;
+    margin: 0 0 0 100px;
+}
+
+/* 开始抽题按钮 */
+.main-form #choice-topic {
+    display: block;
+    height: 50px;
+    width: 180px;
+    text-align: center;
+    line-height: 50px;
+    background:#ff8300;
+    float: right;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    cursor: pointer; 
+    margin: 0 100px 0 0;
+}

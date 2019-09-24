@@ -1,0 +1,147 @@
+body,ul,li {
+    padding: 0;
+    margin: 0;
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* 头部 */
+header {
+    width: 100%;
+    min-width: 1226px;
+    height: 85px;
+    border-bottom: 2px solid #e6e6e6;
+}
+header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+header .head {
+    width: 1226px;
+    height: 85px;
+    margin: 0 auto;
+}
+header .head .logo {
+    width: 85px;
+    height: 85px;
+    background: url(../img/logo.jpg) no-repeat ;
+    background-size: 100%;
+    float: left;
+}
+header .head span {
+    line-height: 85px;
+    font-size: 36px;
+    font-weight: bold;
+    color:#404040;
+}
+header .head a { 
+    float: right;
+    text-align: center;
+    line-height: 85px;
+    font-size: 24px;
+    color: #2e2e2e;
+}
+header .head a:hover {
+    color: #ff8300;
+}
+
+/* 主体部分 */
+.main-container {
+    width: 100%;
+    min-width: 1226px;
+    height: 600px;
+}
+.main-container .main {
+    width: 1226px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+
+/* 注册部分 */
+.form-container {
+    width: 1000px;
+    height: 550px;
+    margin: 0 auto;  
+    position: relative;
+    top: 50px;
+    box-shadow: 0 20px 30px 0 rgba(7,13,28,0.04);
+    border-radius: 5px;
+    /* border-bottom: 2px solid #e6e6e6; */
+}
+.form-container .form {
+    width: 400px;
+    height: 550px;
+    margin: 0 auto;
+    padding-top: 1px;
+}
+.form-container .form h3 {
+    text-align: center;
+    color: #2e2e2e;
+    font-size: 30px;
+    /* padding-top: 20px; */
+    font-weight: normal;
+}
+
+
+/* 表单中间 */
+.loginForm .input-text {
+    height: 270px;
+    width: 380px;
+    border: 0;
+}
+.input-text input {
+    display: block;
+    height: 40px;
+    width: 380px;
+    border: 0;
+    border-bottom: 1px solid #e6e6e6;
+    outline: none;
+    font-size: 14px;
+    color: #999;
+    margin: 20px auto;   
+    padding-left: 15px;
+}
+.input-text #username {
+    margin-top: 35px;
+}
+form span {
+    display: block;
+    float: left;
+    height: 25px;
+    width: 230px;
+    margin: 10px 0 10px 17px;
+}
+
+/* 登录按钮 */
+button {
+    height: 50px;
+    width: 380px;
+    background:#ff8300;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    cursor: pointer;
+    margin: 80px auto 0;
+}
+
+/* 底部 */
+footer {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    min-width: 1226px;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 2px solid #e6e6e6;
+}
+
+
+

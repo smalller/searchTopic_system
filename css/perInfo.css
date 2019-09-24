@@ -1,0 +1,76 @@
+.main {
+    position: relative;
+    /* border: 2px solid #999; */
+}
+.main .right {
+    
+    width: 430px;
+    /* height: 700px; */
+    /* border: 2px solid #999; */
+    margin: 0 auto;
+    float: left;
+    position: absolute;
+    /* top: 50px; */
+    left: 150px;
+}
+.main .right li {
+    width: 430px;
+    text-align: left;
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    
+    border: 1px solid #999;
+    border-bottom: none;
+}
+
+
+.main .left {
+    /* border: 1px solid black; */
+    position: absolute;
+    /* top: 50px;
+    left: 100px; */
+    float: left;
+}
+
+.main .left li {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    font-size: 18px;
+    border: 1px solid #999;
+    border-bottom: none;
+    border-right: none;
+}
+
+.info-box {
+    width: 602px;
+    height: 459px;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    border-bottom: 1px solid #999;
+}
+
+
+
+
+/* 登录按钮 */
+.main button {
+    height: 50px;
+    width: 380px;
+    background:#ff8300;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+
+    position: absolute;
+    top: 580px;
+    left: 310px;
+}
