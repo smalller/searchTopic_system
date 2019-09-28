@@ -48,6 +48,7 @@
     <!-- 主体部分 -->
     <div class="main-box">    
         <div class="main">
+            <a href="outputExcel.php" class="output">导出抽题信息</a>
             <div class="alert">
                 <span id="open">查看题库</span>
             </div>

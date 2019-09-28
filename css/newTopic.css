@@ -2,15 +2,43 @@
     position: relative;
 }
 
+.main .output {
+    display: block;
+    float: left;
+    padding: 10px;
+    background: #ff8300;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+    margin: 30px 0 0 50px;
+}
+.main .output:hover {
+    color: #ff8300;
+    background: #fff;
+    border: 2px solid #e6e6e6;
+    transition: all 0.3s;
+}
+
 .main .alert span {
     display: block;
     cursor: pointer;
     float: right;
+    padding: 10px;
+    background: #ff8300;
+    border-radius: 10px;
     font-size: 18px;
-    color: #2e2e2e;
+    color: #fff;
     font-weight: normal;
     text-align: center;
     margin: 30px 50px 0 0;
+}
+.main .alert span:hover {
+    color: #ff8300;
+    background: #fff;
+    border: 2px solid #e6e6e6;
+    transition: all 0.3s;
 }
 
 
