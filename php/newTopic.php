@@ -75,7 +75,6 @@
         </div>
     </div>
     <footer>四川信息职业技术学院 - 毕业设计选题系统</footer>
-
     <div class="black-overlay" id="black-box"></div>
     <script src="../js/newTopic.js"></script>
 </body>

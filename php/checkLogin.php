@@ -12,10 +12,13 @@
         //验证用户数输入的数据是否有效
         if(strlen($username) < 1){
             $err = "请输入用户名";
+            $color = "red";
         } else if(strlen($password) < 1) {
             $err = "请输入密码";
+            $color = "red";
         } else {
             $err = "用户名或密码不正确";
+            $color = "red";
         }
 
          //当输入的值都不为空时

@@ -1,6 +1,6 @@
-* {
-    margin: 0;
+body,ul,li {
     padding: 0;
+    margin: 0;
     font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
 }
 a {
@@ -13,6 +13,7 @@ header {
     width: 100%;
     min-width: 1226px;
     height: 85px;
+    border-bottom: 2px solid #e6e6e6;
 }
 header::after {
     content: "";
@@ -37,15 +38,22 @@ header .head span {
     font-weight: bold;
     color:#404040;
 }
-
+header .head a { 
+    float: right;
+    text-align: center;
+    line-height: 85px;
+    font-size: 24px;
+    color: #2e2e2e;
+}
+header .head a:hover {
+    color: #ff8300;
+}
 
 /* 主体部分 */
 .main-container {
     width: 100%;
     min-width: 1226px;
     height: 600px;
-    background: url(../img/main_bg.png) no-repeat 50% 50%;
-    margin: 0 auto;
 }
 .main-container .main {
     width: 1226px;
@@ -53,76 +61,66 @@ header .head span {
     margin: 0 auto;
 }
 
-/* 登录表单 */
-.main .loginForm {
-    height: 330px;
-    width: 360px;
-    float: right;
-    margin: 100px 60px;
-    background: #fff;
+
+/* 注册部分 */
+.form-container {
+    width: 1000px;
+    height: 550px;
+    margin: 0 auto;  
+    position: relative;
+    top: 50px;
+    box-shadow: 0 20px 30px 0 rgba(7,13,28,0.04);
+    border-radius: 5px;
+    /* border-bottom: 2px solid #e6e6e6; */
+}
+.form-container .form {
+    width: 400px;
+    height: 550px;
+    margin: 0 auto;
+    padding-top: 1px;
+}
+.form-container .form h3 {
+    text-align: center;
+    color: #2e2e2e;
+    font-size: 30px;
+    /* padding-top: 20px; */
+    font-weight: normal;
 }
 
-/* 表单上部分 */
-.loginForm .form-top {
-    height: 60px;
-    width: 360px; 
-    border-bottom: 2px solid #ff8300;
-}
-.loginForm .form-top .login {
-    float: left;
-    display: block;
-    height: 63px;
-    width: 180px;
-    font-size: 20px;
-    color: #999;
-    text-align: center;
-    line-height: 60px;
-    box-sizing: border-box;
-}
 
 /* 表单中间 */
 .loginForm .input-text {
-    height: 130px;
-    width: 360px;
+    height: 270px;
+    width: 380px;
     border: 0;
 }
 .input-text input {
     display: block;
     height: 40px;
-    width: 300px;
-    border: 1px solid #e6e6e6;
+    width: 380px;
+    border: 0;
+    border-bottom: 1px solid #e6e6e6;
     outline: none;
     font-size: 14px;
     color: #999;
-    margin: 0 auto;   
+    margin: 20px auto;   
     padding-left: 15px;
 }
 .input-text #username {
-    margin: 30px auto 20px;
+    margin-top: 35px;
 }
-
-/* 找回密码 */
-.loginForm .register  a {
-    color: #999;
-    float: right;
-    margin: -10px 30px 10px 0;
-}
-.loginForm .register  a:hover {
-    color: #ff8300;
-}
-.loginForm .register span {
+form span {
     display: block;
     float: left;
     height: 25px;
     width: 230px;
-    margin: -10px 0 10px 30px;
-    color: red;
+    margin: 10px 0 10px 17px;
 }
 
 /* 登录按钮 */
-.loginForm button {
+button {
     height: 50px;
-    width: 300px;
+    width: 380px;
     background:#ff8300;
     border: 0;
     outline: none;
@@ -130,15 +128,20 @@ header .head span {
     font-size: 18px;
     display: block;
     cursor: pointer;
-    margin: 0 auto;
+    margin: 80px auto 0;
 }
 
 /* 底部 */
 footer {
     display: inline-block;
-    height: 30px;
+    height: 40px;
+    line-height: 40px;
     width: 100%;
     min-width: 1226px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 60px;
+    border-top: 2px solid #e6e6e6;
 }
+
+
+
