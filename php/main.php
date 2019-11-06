@@ -22,6 +22,7 @@
                     <li id="bom"><a href="#">学生选题</a></li>
                     <li><a href="perInfo.php">个人信息</a></li>
                     <li><a href="newTopic.php">新增题目</a></li>
+                    <li><a href="student.php">学生信息</a></li>
                 </ul>
             </div>
             <div class="user">
@@ -58,10 +59,6 @@
                         <?php echo "<tr><td>{$values['topic']}</td></tr>"?>
                     <?php }?>                   
                 </table>
-            </div>
-            <!-- 抽中题目弹窗 -->
-            <div id="alert-topic">
-                <span id="close-topic">×</span>
             </div>
             <!-- 表单 -->
             <div class="main-form">

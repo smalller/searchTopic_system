@@ -1,18 +1,24 @@
-.main {
-    position: relative;
-    /* border: 2px solid #999; */
+.main-box .main {
+    width: 1000px;
+    height: 560px;
+    margin: 0 auto 0;
+    box-shadow: 0 20px 30px 0 rgba(7,13,28,0.04);
+    border-radius: 5px;
 }
+
+.main-box .main {
+    position: relative;
+    padding-top: 130px;
+}
+
 .main .right {
-    
     width: 430px;
-    /* height: 700px; */
-    /* border: 2px solid #999; */
     margin: 0 auto;
     float: left;
     position: absolute;
-    /* top: 50px; */
     left: 150px;
 }
+
 .main .right li {
     width: 430px;
     text-align: left;
@@ -20,18 +26,38 @@
     height: 50px;
     line-height: 50px;
     padding-left: 20px;
-    
+
     border: 1px solid #999;
     border-bottom: none;
 }
 
+.main .right #con {
+    width: 430px;
+    text-align: left;
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border: 1px solid #999;
+}
+
 
 .main .left {
-    /* border: 1px solid black; */
     position: absolute;
-    /* top: 50px;
-    left: 100px; */
     float: left;
+}
+
+.main .left #title_con {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    font-size: 18px;
+    border: 1px solid #999;
+    border-right: none;
 }
 
 .main .left li {
@@ -47,21 +73,16 @@
 
 .info-box {
     width: 602px;
-    height: 459px;
     position: absolute;
     top: 50px;
     left: 200px;
-    border-bottom: 1px solid #999;
 }
-
-
-
 
 /* 登录按钮 */
 .main button {
     height: 50px;
     width: 380px;
-    background:#ff8300;
+    background: #ff8300;
     border: 0;
     outline: none;
     color: #fff;
@@ -73,4 +94,17 @@
     position: absolute;
     top: 580px;
     left: 310px;
+}
+
+
+/* 底部 */
+footer {
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    min-width: 1226px;
+    text-align: center;
+    margin-top: 10px;
+    border-top: 2px solid #e6e6e6;
 }

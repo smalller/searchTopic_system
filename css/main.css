@@ -8,18 +8,23 @@
     display: block;
     cursor: pointer;
     float: right;
+    padding: 10px;
+    background: #ff8300;
+    border-radius: 10px;
     font-size: 18px;
-    color: #2e2e2e;
+    color: #fff;
     font-weight: normal;
     text-align: center;
     margin: 30px 50px 0 0;
 }
 .main .alert span:hover {
     color: #ff8300;
-    transition: 0.2s all;
+    background: #fff;
+    border: 2px solid #e6e6e6;
+    transition: all 0.3s;
 }
 
-/* 弹窗 */
+/* 显示题目弹窗 */
 .main .alert-box {
     display: none; 
     width: 600px;
@@ -32,7 +37,7 @@
     padding: 40px 10px 40px 40px;
 }
 
-/* 弹窗里的小叉叉按钮 */
+/* 显示题目弹窗里的小叉叉按钮 */
 .main .alert-box span {
     display: block;
     float: right;
@@ -61,37 +66,6 @@ table td {
     border: 1px solid #999;
 }
 
-
-/* 抽中题目弹窗 */
-.main #alert-topic {
-    display: none;
-    width: 500px;
-    height: 250px;
-    position: absolute;
-    top: 50px;
-    left: 250px;
-    background: #fff;
-    z-index: 3;
-    overflow: auto; 
-}
-/* 弹窗里的小叉叉按钮 */
-.main #alert-topic span {
-    display: block;
-    float: right;
-    cursor: pointer;
-    height: 30px;
-    width: 30px;
-    text-align: center;
-    line-height: 30px;
-    margin: 10px 10px 0 0;
-    font-size: 40px;
-    color: #999;
-}
-.main #alert-topic span:hover {
-    color: #ff8300;
-}
-
-
 /* 弹窗后的黑色板块 */
 .black-overlay {
     display: none; 
@@ -104,6 +78,7 @@ table td {
     z-index: 2; 
     opacity: .6; 
 }
+
 
 /* 表单盒子 */
 .main-form {

@@ -33,6 +33,7 @@
     $name = htmlspecialchars(checkName($_POST["name"]));
     $topic = htmlspecialchars(checkTopic($_POST["topic"]));
     $telephone = htmlspecialchars(checkTelephone($_POST["telephone"]));
+    $content = $_POST["content"];
 
 
     //当点击提交后执行以下操作
@@ -61,8 +62,8 @@
                 $color = "red";
             } else {
                 // sql防御操作(将输入的值与验证的值进行隔离，安全)
-                $pre_stmt5 = $mysqli->prepare("insert into topic (topic,name,telephone) values(?,?,?)");  //准备sql语句，外部接收到的值先以?替代
-                $pre_stmt5->bind_param("ssi",$topic,$name,$telephone); //给上面的语句进行绑定参数，有几个参数，前面就有几个s 
+                $pre_stmt5 = $mysqli->prepare("insert into topic (topic,name,telephone,content) values(?,?,?,?)");  //准备sql语句，外部接收到的值先以?替代
+                $pre_stmt5->bind_param("ssis",$topic,$name,$telephone,$content); //给上面的语句进行绑定参数，有几个参数，前面就有几个s 
 
                 //执行sql语句并进行判断
                 if($pre_stmt5->execute()) {

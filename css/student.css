@@ -1,0 +1,95 @@
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+
+/* 头部 */
+header {
+    height: 72px;
+    width: 100%;
+    min-width: 1226px;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+.nav li {
+    float: left;
+    line-height: 70px;
+    height: 70px;
+    width: 100px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+
+/* 主体部分 */
+.expend-container {
+    padding: 30px 0;
+}
+
+.expend-container .output {
+    display: block;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #ff8300;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: normal;
+    margin: 30px 0 30px 50px;
+}
+
+.expend-container .output:hover {
+    color: #ff8300;
+    background: #fff;
+    border: 2px solid #e6e6e6;
+    transition: all 0.3s;
+}
+
+.expend-container {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 12px 12px 12px 12px rgba(7, 13, 28, 0.04);
+}
+
+/* 表格部分 */
+.expend-container table {
+    margin: 0 auto 0;
+    margin-top: 30px;
+    width: 1100px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+table th {
+    text-align: center;
+}
+
+
+/* 底部 */
+footer {
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    min-width: 1226px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 2px solid #e6e6e6;
+}

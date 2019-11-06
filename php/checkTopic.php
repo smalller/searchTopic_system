@@ -2,8 +2,9 @@
     include "sql-conn.php";
 
     //弹窗封装函数
-    function Alert($txt,$topic_name,$url) {
-        echo '<script>alert("'.$txt.' '.《.$topic_name.》.'");location.href = "'.$url.'";</script>';   
+    function Alert($txt,$topic_name,$topic_con,$url) {
+        echo '<script>alert("'.$txt.' '.《.$topic_name.》.'\n\n'.$topic_con.'");
+        location.href = "'.$url.'";</script>';   
     }
 
     //点击查看题目，题目就会从数据库中调用出来显示在前端页面上
@@ -60,7 +61,7 @@
     $userName = $_SESSION["username"]; 
 
 
-    //当点击开始选题后执行以下操作
+    //当点击确认信息后执行以下操作
     if(isset($_POST["choice"])) {
         //验证输入的内容是否有效
         if(strlen($name) < 1) {
@@ -117,12 +118,13 @@
         if(!empty($name) && !empty($class) && !empty($departments) && !empty($profession) && !empty($mentor) && !empty($mentorNum)) {
 
             //随机从数据库中查询一条记录
-            $serach_topic = "select topic from topic order by rand() limit 1;"; //随机查询语句
+            $serach_topic = "select topic,content from topic order by rand() limit 1;"; //随机查询语句
             $res = $mysqli->query($serach_topic);
             $all_topic = $res->fetch_all(MYSQLI_ASSOC);
 
             foreach($all_topic as $val) {   //将查询的结果遍历出来
                 $topname = $val['topic'];   //只保留topic字段的值，并赋给一个变量好在下面的弹窗部分调用
+                $content = $val['content'];
                 $topicName = $userName . ' : ' . $val['topic']; //只保留topic字段的值，并赋给一个变量好在下面调用，在抽到的topic钱前面加上该用户的学号，可以使数据具有唯一性
             }
 
@@ -138,12 +140,12 @@
                 $pre_stmt5->close(); //关闭数据库操作语句
             } else {
                 //将随机查询到的字段插入到该账号的topic字段里
-                $pre_stmt6 = $mysqli->prepare("update user set topic = ? where username = $userName");  //准备sql语句，外部接收到的值先以?替代
-                $pre_stmt6->bind_param("s",$topicName); //给上面的语句进行绑定参数，有几个参数，前面就有几个s
+                $pre_stmt6 = $mysqli->prepare("update user set topic = ?,content = ? where username = $userName");  //准备sql语句，外部接收到的值先以?替代
+                $pre_stmt6->bind_param("ss",$topicName,$content); //给上面的语句进行绑定参数，有几个参数，前面就有几个s
 
                 //当执行插入操作过后
                 if($pre_stmt6->execute()) {
-                    Alert("您抽中的毕业设计为： ","$topname","perInfo.php");    //将抽中的题目以弹窗的形式展示出来
+                    Alert("您抽中的毕业设计为： ",$topname,"详情请在个人信息中查看","perInfo.php");    //将抽中的题目以弹窗的形式展示出来
                 } else {
                     $err = "信息输入有误，请重新输入";
                 }

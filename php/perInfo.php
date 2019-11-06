@@ -22,6 +22,7 @@
                     <li><a href="main.php">学生选题</a></li>
                     <li id="bom"><a href="#">个人信息</a></li>
                     <li><a href="newTopic.php">新增题目</a></li>
+                    <li><a href="student.php">学生信息</a></li>
                 </ul>
             </div>
             <div class="user">
@@ -58,11 +59,13 @@
                     <li>题目：</li>
                     <li>导师姓名：</li>
                     <li>导师电话：</li>
+                    <li id="title_con">题目内容：</li>
                 </ul>
                 <ul class="right"> 
                     <?php foreach($all as $values) {?>
                         <?php echo "<li>{$values}</li>"?>
                     <?php }?>
+                    <?php echo "<li id='con' title='{$all1['content']}'>{$all1["content"]}</li>"?>
                 </ul>
             </div>                  
         </div>

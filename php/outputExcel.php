@@ -9,7 +9,7 @@
 
     //填充指定单元格
     $objSheet->setCellValue("A1","毕业设计学生抽题信息表");
-    $objSheet->mergeCells("A1:J2");
+    $objSheet->mergeCells("A1:K2");
 
     $objSheet->setCellValue("A3","序号");
     $objSheet->setCellValue("B3","姓名");
@@ -19,8 +19,9 @@
     $objSheet->setCellValue("F3","系部");
     $objSheet->setCellValue("G3","电话");
     $objSheet->setCellValue("H3","题目");
-    $objSheet->setCellValue("I3","指导教师");
-    $objSheet->setCellValue("J3","导师电话");
+    $objSheet->setCellValue("I3","题目内容");
+    $objSheet->setCellValue("J3","指导教师");
+    $objSheet->setCellValue("K3","导师电话");
 
 
     //填充动态单元格
@@ -32,14 +33,14 @@
     $all1 = $result1->fetch_all(MYSQLI_ASSOC);    //返回关联数组方法
 
     foreach($all1 as $key=>$val1) {
-        $objSheet->setCellValue("A".$j,$num)->setCellValue("B".$j,$val1["name"])->setCellValue("C".$j,$val1["username"])->setCellValue("D".$j,$val1["class"])->setCellValue("E".$j,$val1["profession"])->setCellValue("F".$j,$val1["departments"])->setCellValue("G".$j,$val1["telephone"])->setCellValue("H".$j,$val1["topic"])->setCellValue("I".$j,$val1["mentor"])->setCellValue("J".$j,$val1["mentorNum"]);
+        $objSheet->setCellValue("A".$j,$num)->setCellValue("B".$j,$val1["name"])->setCellValue("C".$j,$val1["username"])->setCellValue("D".$j,$val1["class"])->setCellValue("E".$j,$val1["profession"])->setCellValue("F".$j,$val1["departments"])->setCellValue("G".$j,$val1["telephone"])->setCellValue("H".$j,$val1["topic"])->setCellValue("I".$j,$val1["content"])->setCellValue("J".$j,$val1["mentor"])->setCellValue("K".$j,$val1["mentorNum"]);
         $j++;
         $num++;
     }
 
-    $objSheet->getStyle("A1:J2")->getFont()->setSize(20);     //设置字体大小
+    $objSheet->getStyle("A1:K2")->getFont()->setSize(20);     //设置字体大小
 
-    $objSheet->getStyle("A1:"."J".($j-1))->applyFromArray(getBorderStyle("000000"));    //调用封装的边框函数，实现改变边框样式
+    $objSheet->getStyle("A1:"."K".($j-1))->applyFromArray(getBorderStyle("000000"));    //调用封装的边框函数，实现改变边框样式
 
     $objSheet->freezePane('A4');    //固定前3行
 
@@ -52,8 +53,9 @@
     $objSheet->getColumnDimension("F")->setWidth(15);
     $objSheet->getColumnDimension("G")->setWidth(13);
     $objSheet->getColumnDimension("H")->setWidth(42);
-    $objSheet->getColumnDimension("I")->setWidth(10);
-    $objSheet->getColumnDimension("J")->setWidth(13);
+    $objSheet->getColumnDimension("I")->setWidth(50);
+    $objSheet->getColumnDimension("J")->setWidth(10);
+    $objSheet->getColumnDimension("K")->setWidth(13);
 
 
 

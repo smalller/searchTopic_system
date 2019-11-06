@@ -23,6 +23,7 @@
                     <li><a href="main.php">学生选题</a></li>
                     <li><a href="perInfo.php">个人信息</a></li>
                     <li id="bom"><a href="#">新增题目</a></li>
+                    <li><a href="student.php">学生信息</a></li>
                 </ul>
             </div>
             <div class="user">
@@ -48,7 +49,6 @@
     <!-- 主体部分 -->
     <div class="main-box">    
         <div class="main">
-            <a href="outputExcel.php" class="output">导出抽题信息</a>
             <div class="alert">
                 <span id="open">查看题库</span>
             </div>
@@ -62,10 +62,11 @@
             </div>
             <div class="main-form">
                 <form action="newTopic.php" method="POST">
-                    <h3>新增题目</h3>
-                    <input type="text" name="topic" placeholder="请输入您要新增的题目名称" value="<?php echo isset($_POST["topic"]) ? $topic : ''; ?>">
+                    <h3>新增题目</h3>                  
                     <input type="text" name="name" placeholder="请输入您的姓名" value="<?php echo isset($_POST["name"]) ? $name : ''; ?>">
                     <input type="text" name="telephone" placeholder="请输入您的电话" value="<?php echo isset($_POST["telephone"]) ? $telephone : ''; ?>">
+                    <input type="text" name="topic" placeholder="请输入您要新增的题目名称" value="<?php echo isset($_POST["topic"]) ? $topic : ''; ?>">
+                    <textarea name="content" placeholder="请输入题目内容"><?php echo isset($_POST["content"]) ? $content : ''; ?></textarea>
                     <span style="color:<?php echo $color;?>">
                         <?php echo $err;?>
                     </span> 
